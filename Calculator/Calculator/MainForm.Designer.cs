@@ -53,7 +53,7 @@
             this.tbSecondValue.Name = "tbSecondValue";
             this.tbSecondValue.Size = new System.Drawing.Size(131, 20);
             this.tbSecondValue.TabIndex = 1;
-            this.tbSecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSecondValue_KeyPress);
+            this.tbSecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstValue_KeyPress);
             // 
             // tbResult
             // 
@@ -75,6 +75,7 @@
             this.bthPlus.TabIndex = 3;
             this.bthPlus.Text = "+";
             this.bthPlus.UseVisualStyleBackColor = true;
+            this.bthPlus.Click += new System.EventHandler(this.bthPlus_Click);
             // 
             // bthMinus
             // 
@@ -85,6 +86,7 @@
             this.bthMinus.TabIndex = 4;
             this.bthMinus.Text = "-";
             this.bthMinus.UseVisualStyleBackColor = true;
+            this.bthMinus.Click += new System.EventHandler(this.bthPlus_Click);
             // 
             // bthDivide
             // 
@@ -95,6 +97,7 @@
             this.bthDivide.TabIndex = 5;
             this.bthDivide.Text = "/";
             this.bthDivide.UseVisualStyleBackColor = true;
+            this.bthDivide.Click += new System.EventHandler(this.bthPlus_Click);
             // 
             // bthMultiply
             // 
@@ -105,6 +108,7 @@
             this.bthMultiply.TabIndex = 6;
             this.bthMultiply.Text = "*";
             this.bthMultiply.UseVisualStyleBackColor = true;
+            this.bthMultiply.Click += new System.EventHandler(this.bthPlus_Click);
             // 
             // bthClear
             // 

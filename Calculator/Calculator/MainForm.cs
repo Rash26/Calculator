@@ -32,45 +32,47 @@ namespace Calculator
 
         private void tbFirstValue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (OnlyNumbers((e)))
+            if (char.IsNumber(e.KeyChar))
+            {
+                
+            }
+            else if (e.KeyChar == ',' || e.KeyChar == '-')
             {
 
             }
-        }
-
-        private void tbSecondValue_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (OnlyNumbers((e)))
+            else
             {
-                
+                e.Handled = e.KeyChar != (char) Keys.Back;
             }
         }
 
         private void bthPlus_Click(object sender, EventArgs e)
         {
-            if (CheckEnterValue())
+            if (!CheckEnterValue())
             {
-                tbResult.Text = Convert.ToString(Int32.Parse(tbFirstValue.Text) + Int32.Parse(tbSecondValue.Text));
+                return;
             }
-            
+
+            var a = Convert.ToDouble(tbFirstValue.Text);
+            var b = Convert.ToDouble(tbSecondValue.Text);
+            double result = 0;
+            switch (((Button)sender).Name)
+            {
+                case "bthPlus":
+                    result = a + b;break;
+                case "bthMinus":
+                    result = a - b; break;
+                case "bthMultiply":
+                    result = a * b; break;
+                case "bthDivide":
+                    result = a / b; break;
+                default: throw  new Exception("ERROR"); break;
+            }
+
+            tbResult.Text = Convert.ToString(result); 
         }
 
-        public bool OnlyNumbers(KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.' || e.KeyChar == '-')
-            {
-                
-            }
-            else
-            {
-                e.Handled = e.KeyChar != (char)Keys.Back;     
-                MessageBox.Show("Нужно ввести только цифры !");
-                return false;
-            }
-            return true;
-        }
-
-        public bool CheckEnterValue()
+        private bool CheckEnterValue()
         {
             if (tbFirstValue.Text == "" || tbSecondValue.Text == "")
             {
@@ -80,23 +82,5 @@ namespace Calculator
             else
             return true;
         }
-
-        private void bthMinus_Click(object sender, EventArgs e)
-        {
-            CheckEnterValue();
-        }
-
-        private void bthMultiply_Click(object sender, EventArgs e)
-        {
-            CheckEnterValue();
-        }
-
-        private void bthDivide_Click(object sender, EventArgs e)
-        {
-            CheckEnterValue();
-        }
-
-
-
     }
 }
