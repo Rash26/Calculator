@@ -55,8 +55,12 @@
             // 
             // tbResult
             // 
+            this.tbResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tbResult.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tbResult.Enabled = false;
             this.tbResult.Location = new System.Drawing.Point(12, 12);
             this.tbResult.Name = "tbResult";
+            this.tbResult.ReadOnly = true;
             this.tbResult.Size = new System.Drawing.Size(266, 20);
             this.tbResult.TabIndex = 2;
             // 
