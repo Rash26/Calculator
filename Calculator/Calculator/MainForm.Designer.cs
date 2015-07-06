@@ -45,6 +45,7 @@
             this.tbFirstValue.Name = "tbFirstValue";
             this.tbFirstValue.Size = new System.Drawing.Size(129, 20);
             this.tbFirstValue.TabIndex = 0;
+            this.tbFirstValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstValue_KeyPress);
             // 
             // tbSecondValue
             // 
@@ -52,6 +53,7 @@
             this.tbSecondValue.Name = "tbSecondValue";
             this.tbSecondValue.Size = new System.Drawing.Size(131, 20);
             this.tbSecondValue.TabIndex = 1;
+            this.tbSecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSecondValue_KeyPress);
             // 
             // tbResult
             // 

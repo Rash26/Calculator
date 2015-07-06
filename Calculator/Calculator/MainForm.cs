@@ -28,5 +28,45 @@ namespace Calculator
             tbSecondValue.Clear();
             tbResult.Clear();
         }
+
+        private void tbFirstValue_KeyUp(object sender, KeyEventArgs e)
+        {
+
+            int Simbol = new int();
+
+            Simbol = Int32.Parse(tbFirstValue.Text);
+
+            tbResult.Text = Convert.ToString(Simbol);
+
+
+
+        }
+
+        private void tbFirstValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char) Keys.Back;
+            }
+        }
+
+        private void tbSecondValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+
+            }
+            else
+            {
+                e.Handled = e.KeyChar != (char)Keys.Back;
+            }
+        }
+
+
+
     }
 }
