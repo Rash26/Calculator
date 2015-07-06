@@ -40,10 +40,44 @@ namespace Calculator
             {
 
             }
+            
             else
             {
                 e.Handled = e.KeyChar != (char) Keys.Back;
             }
+
+
+            ///Проверка запятой в строке
+            ///Если запятая имеется то вставка запрещается
+            ///
+
+            if (e.KeyChar == '.' )
+            {
+                e.KeyChar = ','; //замена точки на запятую
+            }
+
+            else if (e.KeyChar == ',' || e.KeyChar == '-')
+            {
+                if (((sender as TextBox).Text.IndexOf(',') != -1) //запятая уже есть
+                    || (sender as TextBox).Text.Length == 0) //число не введено
+                {
+                    e.Handled = true;
+                }
+
+                else if (((sender as TextBox).Text.IndexOf('-') != -1) //запятая уже есть
+                   || (sender as TextBox).Text.Length == 0) //число не введено
+                {
+                    e.Handled = true;
+                }
+
+                return;
+            }
+
+            ///
+            /// 
+            /// 
+               
+            
         }
 
         private void bthPlus_Click(object sender, EventArgs e)
@@ -65,7 +99,16 @@ namespace Calculator
                 case "bthMultiply":
                     result = a * b; break;
                 case "bthDivide":
-                    result = a / b; break;
+                    if (b == 0)
+                    {
+                        MessageBox.Show("Деление на ноль не возможно ! ! !");
+                    }
+                    else
+                    {
+                        result = a / b; 
+                    }
+                    break;
+
                 default: throw  new Exception("ERROR"); break;
             }
 
