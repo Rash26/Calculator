@@ -29,41 +29,71 @@ namespace Calculator
             tbResult.Clear();
         }
 
-        private void tbFirstValue_KeyUp(object sender, KeyEventArgs e)
-        {
-
-            int Simbol = new int();
-
-            Simbol = Int32.Parse(tbFirstValue.Text);
-
-            tbResult.Text = Convert.ToString(Simbol);
-
-
-
-        }
 
         private void tbFirstValue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (OnlyNumbers((e)))
             {
-                
-            }
-            else
-            {
-                e.Handled = e.KeyChar != (char) Keys.Back;
+
             }
         }
 
         private void tbSecondValue_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar))
+            if (OnlyNumbers((e)))
             {
+                
+            }
+        }
 
+        private void bthPlus_Click(object sender, EventArgs e)
+        {
+            if (CheckEnterValue())
+            {
+                tbResult.Text = Convert.ToString(Int32.Parse(tbFirstValue.Text) + Int32.Parse(tbSecondValue.Text));
+            }
+            
+        }
+
+        public bool OnlyNumbers(KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) || e.KeyChar == '.' || e.KeyChar == '-')
+            {
+                
             }
             else
             {
-                e.Handled = e.KeyChar != (char)Keys.Back;
+                e.Handled = e.KeyChar != (char)Keys.Back;     
+                MessageBox.Show("Нужно ввести только цифры !");
+                return false;
             }
+            return true;
+        }
+
+        public bool CheckEnterValue()
+        {
+            if (tbFirstValue.Text == "" || tbSecondValue.Text == "")
+            {
+                MessageBox.Show("Введены не все данные ! ! !");
+                return false;
+            }
+            else
+            return true;
+        }
+
+        private void bthMinus_Click(object sender, EventArgs e)
+        {
+            CheckEnterValue();
+        }
+
+        private void bthMultiply_Click(object sender, EventArgs e)
+        {
+            CheckEnterValue();
+        }
+
+        private void bthDivide_Click(object sender, EventArgs e)
+        {
+            CheckEnterValue();
         }
 
 
