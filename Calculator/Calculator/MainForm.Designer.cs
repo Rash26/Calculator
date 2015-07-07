@@ -41,6 +41,11 @@ namespace Calculator
             this.Clear = new System.Windows.Forms.Button();
             this.Sin = new System.Windows.Forms.Button();
             this.Cos = new System.Windows.Forms.Button();
+            this.Tan = new System.Windows.Forms.Button();
+            this.Cot = new System.Windows.Forms.Button();
+            this.Sqrt = new System.Windows.Forms.Button();
+            this.Power = new System.Windows.Forms.Button();
+            this.Squaring = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstValue
@@ -117,7 +122,7 @@ namespace Calculator
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clear.Location = new System.Drawing.Point(13, 166);
+            this.Clear.Location = new System.Drawing.Point(13, 219);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(265, 37);
             this.Clear.TabIndex = 7;
@@ -147,12 +152,72 @@ namespace Calculator
             this.Cos.UseVisualStyleBackColor = true;
             this.Cos.Click += new System.EventHandler(this.SinClick);
             // 
+            // Tan
+            // 
+            this.Tan.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Tan.Location = new System.Drawing.Point(80, 113);
+            this.Tan.Name = "Tan";
+            this.Tan.Size = new System.Drawing.Size(61, 47);
+            this.Tan.TabIndex = 10;
+            this.Tan.Text = "Tan";
+            this.Tan.UseVisualStyleBackColor = true;
+            this.Tan.Click += new System.EventHandler(this.SinClick);
+            // 
+            // Cot
+            // 
+            this.Cot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cot.Location = new System.Drawing.Point(150, 113);
+            this.Cot.Name = "Cot";
+            this.Cot.Size = new System.Drawing.Size(61, 47);
+            this.Cot.TabIndex = 10;
+            this.Cot.Text = "Cot";
+            this.Cot.UseVisualStyleBackColor = true;
+            this.Cot.Click += new System.EventHandler(this.SinClick);
+            // 
+            // Sqrt
+            // 
+            this.Sqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Sqrt.Location = new System.Drawing.Point(13, 166);
+            this.Sqrt.Name = "Sqrt";
+            this.Sqrt.Size = new System.Drawing.Size(61, 47);
+            this.Sqrt.TabIndex = 11;
+            this.Sqrt.Text = "√";
+            this.Sqrt.UseVisualStyleBackColor = true;
+            this.Sqrt.Click += new System.EventHandler(this.SinClick);
+            // 
+            // Power
+            // 
+            this.Power.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Power.Location = new System.Drawing.Point(80, 166);
+            this.Power.Name = "Power";
+            this.Power.Size = new System.Drawing.Size(131, 47);
+            this.Power.TabIndex = 12;
+            this.Power.Text = "x^y";
+            this.Power.UseVisualStyleBackColor = true;
+            this.Power.Click += new System.EventHandler(this.PlusClick);
+            // 
+            // Squaring
+            // 
+            this.Squaring.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Squaring.Location = new System.Drawing.Point(216, 166);
+            this.Squaring.Name = "Squaring";
+            this.Squaring.Size = new System.Drawing.Size(61, 47);
+            this.Squaring.TabIndex = 13;
+            this.Squaring.Text = "x^2";
+            this.Squaring.UseVisualStyleBackColor = true;
+            this.Squaring.Click += new System.EventHandler(this.SinClick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 215);
+            this.ClientSize = new System.Drawing.Size(294, 265);
+            this.Controls.Add(this.Squaring);
+            this.Controls.Add(this.Power);
+            this.Controls.Add(this.Sqrt);
             this.Controls.Add(this.Cos);
+            this.Controls.Add(this.Cot);
+            this.Controls.Add(this.Tan);
             this.Controls.Add(this.Sin);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.Multiply);
@@ -183,6 +248,11 @@ namespace Calculator
         private Button Clear;
         private Button Sin;
         private Button Cos;
+        private Button Tan;
+        private Button Cot;
+        private Button Sqrt;
+        private Button Power;
+        private Button Squaring;
     }
 }
 
