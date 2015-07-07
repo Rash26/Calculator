@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Calculator
+﻿namespace Calculator
 {
-    class Divide : TwoArgument
+    class Divide : ITwoArgument
     {
-        public double calculate(double x, double y)
+        public double Calculate(double x, double y)
         {
             return x / y;
         }

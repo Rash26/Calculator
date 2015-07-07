@@ -2,9 +2,9 @@
 
 namespace Calculator 
 {
-    class Sin : OneArgument
+    class Sin : IOneArgument
     {
-        public double calculate(double x)
+        public double Calculate(double x)
         {
             return Math.Sin(x * Math.PI / 180);
         }

@@ -4,9 +4,9 @@ namespace Calculator
 {
     public static class FactoryOneArgument
     {
-        public static OneArgument CreatCalculator(string calculator)
+        public static IOneArgument CreatCalculator(string calculator)
         {
-    switch (calculator)
+            switch (calculator)
             {
                 case "Sin":
                     return new Sin();
@@ -17,5 +17,4 @@ namespace Calculator
             }
         }
     }
-
 }

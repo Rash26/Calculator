@@ -1,8 +1,7 @@
 ﻿namespace Calculator
 {
-    public interface TwoArgument
+    public interface ITwoArgument
     {
-        double calculate(double x, double y);
-
+        double Calculate(double x, double y);
     }
 }

@@ -4,7 +4,7 @@ namespace Calculator
 {
     public static class FactoryTwoArgument
     {
-        public static TwoArgument CreatCalculator(string calculator)
+        public static ITwoArgument CreatCalculator(string calculator)
         {
         	switch (calculator)
             {
