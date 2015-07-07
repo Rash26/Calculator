@@ -34,7 +34,7 @@ namespace Calculator
             this.FirstValue = new System.Windows.Forms.TextBox();
             this.SecondValue = new System.Windows.Forms.TextBox();
             this.Result = new System.Windows.Forms.TextBox();
-            this.Plus = new System.Windows.Forms.Button();
+            this.Added = new System.Windows.Forms.Button();
             this.Minus = new System.Windows.Forms.Button();
             this.Divide = new System.Windows.Forms.Button();
             this.Multiply = new System.Windows.Forms.Button();
@@ -70,16 +70,16 @@ namespace Calculator
             this.Result.Size = new System.Drawing.Size(266, 20);
             this.Result.TabIndex = 2;
             // 
-            // Plus
+            // Added
             // 
-            this.Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Plus.Location = new System.Drawing.Point(13, 65);
-            this.Plus.Name = "Plus";
-            this.Plus.Size = new System.Drawing.Size(61, 47);
-            this.Plus.TabIndex = 3;
-            this.Plus.Text = "+";
-            this.Plus.UseVisualStyleBackColor = true;
-            this.Plus.Click += new System.EventHandler(this.PlusClick);
+            this.Added.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Added.Location = new System.Drawing.Point(13, 65);
+            this.Added.Name = "Added";
+            this.Added.Size = new System.Drawing.Size(61, 47);
+            this.Added.TabIndex = 3;
+            this.Added.Text = "+";
+            this.Added.UseVisualStyleBackColor = true;
+            this.Added.Click += new System.EventHandler(this.PlusClick);
             // 
             // Minus
             // 
@@ -158,7 +158,7 @@ namespace Calculator
             this.Controls.Add(this.Multiply);
             this.Controls.Add(this.Divide);
             this.Controls.Add(this.Minus);
-            this.Controls.Add(this.Plus);
+            this.Controls.Add(this.Added);
             this.Controls.Add(this.Result);
             this.Controls.Add(this.SecondValue);
             this.Controls.Add(this.FirstValue);
@@ -176,7 +176,7 @@ namespace Calculator
         private TextBox FirstValue;
         private TextBox SecondValue;
         private TextBox Result;
-        private Button Plus;
+        private Button Added;
         private Button Minus;
         private Button Divide;
         private Button Multiply;

@@ -50,7 +50,7 @@ namespace Calculator
 
         private void PlusClick(object sender, EventArgs e)
         {
-            if (FirstValue.Text == "" || SecondValue.Text == "")
+           /* if (FirstValue.Text == "" || SecondValue.Text == "")
             {
                 MessageBox.Show("Введены не все данные");
                 return;
@@ -85,11 +85,16 @@ namespace Calculator
             }
 
             Result.Text = Convert.ToString(result); 
+            */
+            TwoArgument calc = FactoryTwoArgument.CreatCalculator(((Button)sender).Name);
+            double x = Convert.ToDouble(FirstValue.Text);
+            double y = Convert.ToDouble(SecondValue.Text);
+            Result.Text = Convert.ToString(calc.calculate(x,y));
         }
 
         private void SinClick(object sender, EventArgs e)
         {
-            if (FirstValue.Text == "")
+           /* if (FirstValue.Text == "")
             {
                 MessageBox.Show("Введите данные");
                 return;
@@ -110,7 +115,10 @@ namespace Calculator
                  throw  new Exception("ERROR"); 
             }
 
-            Result.Text = Convert.ToString(result);
+            Result.Text = Convert.ToString(result);*/
+            OneArgument calc = FactoryOneArgument.CreatCalculator(((Button)sender).Name);
+            double x = Convert.ToDouble(FirstValue.Text);
+            Result.Text = Convert.ToString(calc.calculate(x));
         }
     }
 }

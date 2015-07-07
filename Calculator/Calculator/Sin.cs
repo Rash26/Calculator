@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace Calculator
+namespace Calculator 
 {
-    class Sin
+    class Sin : OneArgument
     {
-        public double Calculator(double x)
+        public double calculate(double x)
         {
             return Math.Sin(x * Math.PI / 180);
         }

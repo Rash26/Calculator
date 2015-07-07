@@ -2,9 +2,9 @@
 
 namespace Calculator
 {
-    class Cos
+    class Cos : OneArgument
     {
-        public double Calculator(double x)
+     public double calculate(double x)
         {
             return Math.Cos(x * Math.PI / 180);
         }

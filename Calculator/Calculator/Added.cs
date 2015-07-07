@@ -2,9 +2,9 @@
 
 namespace Calculator
 {
-    class Added
+    class Added : TwoArgument
     {
-        public double Calculator(double x, double y)
+        public double calculate(double x, double y)
         {
             return x + y;
         }
