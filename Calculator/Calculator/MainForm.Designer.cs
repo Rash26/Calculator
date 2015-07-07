@@ -38,6 +38,7 @@
             this.bthClear = new System.Windows.Forms.Button();
             this.bthExit = new System.Windows.Forms.Button();
             this.bthSin = new System.Windows.Forms.Button();
+            this.bthCos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbFirstValue
@@ -136,7 +137,7 @@
             // bthSin
             // 
             this.bthSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthSin.Location = new System.Drawing.Point(13, 118);
+            this.bthSin.Location = new System.Drawing.Point(13, 113);
             this.bthSin.Name = "bthSin";
             this.bthSin.Size = new System.Drawing.Size(128, 47);
             this.bthSin.TabIndex = 10;
@@ -144,11 +145,23 @@
             this.bthSin.UseVisualStyleBackColor = true;
             this.bthSin.Click += new System.EventHandler(this.bthSin_Click);
             // 
+            // bthCos
+            // 
+            this.bthCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bthCos.Location = new System.Drawing.Point(150, 113);
+            this.bthCos.Name = "bthCos";
+            this.bthCos.Size = new System.Drawing.Size(128, 47);
+            this.bthCos.TabIndex = 10;
+            this.bthCos.Text = "Cos";
+            this.bthCos.UseVisualStyleBackColor = true;
+            this.bthCos.Click += new System.EventHandler(this.bthSin_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 215);
+            this.Controls.Add(this.bthCos);
             this.Controls.Add(this.bthSin);
             this.Controls.Add(this.bthExit);
             this.Controls.Add(this.bthClear);
@@ -180,6 +193,7 @@
         private System.Windows.Forms.Button bthClear;
         private System.Windows.Forms.Button bthExit;
         private System.Windows.Forms.Button bthSin;
+        private System.Windows.Forms.Button bthCos;
     }
 }
 

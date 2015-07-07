@@ -112,8 +112,9 @@ namespace Calculator
                 case "bthSin":
                     result = Math.Sin(a*Math.PI / 180);
                     break;
-                /*case "bthSin":
-                    break;*/
+                case "bthCos":
+                    result = Math.Cos(a*Math.PI / 180);
+                    break;
              default: throw  new Exception("ERROR"); break;
             }
 
