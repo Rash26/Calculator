@@ -37,6 +37,7 @@
             this.bthMultiply = new System.Windows.Forms.Button();
             this.bthClear = new System.Windows.Forms.Button();
             this.bthExit = new System.Windows.Forms.Button();
+            this.bthSin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbFirstValue
@@ -80,7 +81,7 @@
             // bthMinus
             // 
             this.bthMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthMinus.Location = new System.Drawing.Point(80, 64);
+            this.bthMinus.Location = new System.Drawing.Point(80, 65);
             this.bthMinus.Name = "bthMinus";
             this.bthMinus.Size = new System.Drawing.Size(61, 47);
             this.bthMinus.TabIndex = 4;
@@ -113,7 +114,7 @@
             // bthClear
             // 
             this.bthClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthClear.Location = new System.Drawing.Point(13, 119);
+            this.bthClear.Location = new System.Drawing.Point(13, 166);
             this.bthClear.Name = "bthClear";
             this.bthClear.Size = new System.Drawing.Size(128, 37);
             this.bthClear.TabIndex = 7;
@@ -124,7 +125,7 @@
             // bthExit
             // 
             this.bthExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthExit.Location = new System.Drawing.Point(147, 119);
+            this.bthExit.Location = new System.Drawing.Point(150, 166);
             this.bthExit.Name = "bthExit";
             this.bthExit.Size = new System.Drawing.Size(128, 37);
             this.bthExit.TabIndex = 8;
@@ -132,11 +133,23 @@
             this.bthExit.UseVisualStyleBackColor = true;
             this.bthExit.Click += new System.EventHandler(this.bthExit_Click);
             // 
+            // bthSin
+            // 
+            this.bthSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.bthSin.Location = new System.Drawing.Point(13, 118);
+            this.bthSin.Name = "bthSin";
+            this.bthSin.Size = new System.Drawing.Size(128, 47);
+            this.bthSin.TabIndex = 10;
+            this.bthSin.Text = "SIN";
+            this.bthSin.UseVisualStyleBackColor = true;
+            this.bthSin.Click += new System.EventHandler(this.bthSin_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(285, 161);
+            this.ClientSize = new System.Drawing.Size(282, 215);
+            this.Controls.Add(this.bthSin);
             this.Controls.Add(this.bthExit);
             this.Controls.Add(this.bthClear);
             this.Controls.Add(this.bthMultiply);
@@ -166,6 +179,7 @@
         private System.Windows.Forms.Button bthMultiply;
         private System.Windows.Forms.Button bthClear;
         private System.Windows.Forms.Button bthExit;
+        private System.Windows.Forms.Button bthSin;
     }
 }
 
