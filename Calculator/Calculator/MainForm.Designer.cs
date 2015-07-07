@@ -130,7 +130,7 @@ namespace Calculator
             this.Sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Sin.Location = new System.Drawing.Point(13, 113);
             this.Sin.Name = "Sin";
-            this.Sin.Size = new System.Drawing.Size(128, 47);
+            this.Sin.Size = new System.Drawing.Size(61, 47);
             this.Sin.TabIndex = 10;
             this.Sin.Text = "SIN";
             this.Sin.UseVisualStyleBackColor = true;
@@ -139,9 +139,9 @@ namespace Calculator
             // Cos
             // 
             this.Cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Cos.Location = new System.Drawing.Point(150, 113);
+            this.Cos.Location = new System.Drawing.Point(217, 113);
             this.Cos.Name = "Cos";
-            this.Cos.Size = new System.Drawing.Size(128, 47);
+            this.Cos.Size = new System.Drawing.Size(61, 47);
             this.Cos.TabIndex = 10;
             this.Cos.Text = "Cos";
             this.Cos.UseVisualStyleBackColor = true;

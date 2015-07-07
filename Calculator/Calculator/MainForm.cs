@@ -37,18 +37,18 @@ namespace Calculator
         private void PlusClick(object sender, EventArgs e)
         {
             var nameButton = ((Button)sender).Name;
-            var factory = FactoryTwoArgument.CreatCalculator(nameButton);
+            var calculate = FactoryTwoArgument.CreatCalculator(nameButton);
             var firstArgument = Convert.ToDouble(FirstValue.Text);
             var secondArgument = Convert.ToDouble(SecondValue.Text);
-            Result.Text = Convert.ToString(factory.Calculate(firstArgument, secondArgument), CultureInfo.InvariantCulture);
+            Result.Text = calculate.Calculate(firstArgument, secondArgument).ToString();
         }
 
         private void SinClick(object sender, EventArgs e)
         {
             var nameButton = ((Button) sender).Name;
-            var factory = FactoryOneArgument.CreatCalculator(nameButton);
+            var calculate = FactoryOneArgument.CreatCalculator(nameButton);
             var firstArgument = Convert.ToDouble(FirstValue.Text);
-            Result.Text = Convert.ToString(factory.Calculate(firstArgument), CultureInfo.InvariantCulture);
+            Result.Text = calculate.Calculate(firstArgument).ToString();
         }
     }
 }
