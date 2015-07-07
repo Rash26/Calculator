@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -17,20 +10,15 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void bthExit_Click(object sender, EventArgs e)
+        private void ClearClick(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void btClear_Click(object sender, EventArgs e)
-        {
-            tbFirstValue.Clear();
-            tbSecondValue.Clear();
-            tbResult.Clear();
+            FirstValue.Clear();
+            SecondValue.Clear();
+            Result.Clear();
         }
 
 
-        private void tbFirstValue_KeyPress(object sender, KeyPressEventArgs e)
+        private void FirstValueKeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar))
             {
@@ -60,65 +48,69 @@ namespace Calculator
             }
         }
 
-        private void bthPlus_Click(object sender, EventArgs e)
+        private void PlusClick(object sender, EventArgs e)
         {
-            if (tbFirstValue.Text == "" || tbSecondValue.Text == "")
+            if (FirstValue.Text == "" || SecondValue.Text == "")
             {
-                MessageBox.Show("Введены не все данные ! ! !");
+                MessageBox.Show("Введены не все данные");
                 return;
             }
 
-            var a = Convert.ToDouble(tbFirstValue.Text);
-            var b = Convert.ToDouble(tbSecondValue.Text);
+            var a = Convert.ToDouble(FirstValue.Text);
+            var b = Convert.ToDouble(SecondValue.Text);
             double result = 0;
             switch (((Button)sender).Name)
             {
-                case "bthPlus":
-                    result = a + b;break;
-                case "bthMinus":
-                    result = a - b; break;
-                case "bthMultiply":
-                    result = a * b; break;
-                case "bthDivide":
+                case "Plus":
+                    result = a + b;
+                    break;
+                case "Minus":
+                    result = a - b; 
+                    break;
+                case "Multiply":
+                    result = a * b;
+                    break;
+                case "Divide":
                     if (b == 0)
                     {
-                        MessageBox.Show("Деление на ноль не возможно ! ! !");
+                        MessageBox.Show("Деление на ноль не возможно");
                     }
                     else
                     {
                         result = a / b; 
                     }
                     break;
-
-                default: throw  new Exception("ERROR"); break;
+                default: 
+                    throw  new Exception("ERROR"); 
             }
 
-            tbResult.Text = Convert.ToString(result); 
+            Result.Text = Convert.ToString(result); 
         }
 
-        private void bthSin_Click(object sender, EventArgs e)
+        private void SinClick(object sender, EventArgs e)
         {
-            if (tbFirstValue.Text == "")
+            if (FirstValue.Text == "")
             {
-                MessageBox.Show("Введите данные ! ! !");
+                MessageBox.Show("Введите данные");
                 return;
             }
 
-            var a = Convert.ToDouble(tbFirstValue.Text);
+            var argument = Convert.ToDouble(FirstValue.Text);
             double result = 0;
 
             switch (((Button) sender).Name)
             {
-                case "bthSin":
-                    result = Math.Sin(a*Math.PI / 180);
+                case "Sin":
+                    result = Math.Sin(argument*Math.PI / 180);
                     break;
-                case "bthCos":
-                    result = Math.Cos(a*Math.PI / 180);
+                case "Cos":
+                    result = Math.Cos(argument*Math.PI / 180);
                     break;
-             default: throw  new Exception("ERROR"); break;
+             default: 
+                 throw  new Exception("ERROR"); 
             }
 
-            tbResult.Text = Convert.ToString(result) + " deg "; 
+            Result.Text = Convert.ToString(result);
         }
     }
 }

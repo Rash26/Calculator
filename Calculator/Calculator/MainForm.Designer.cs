@@ -1,11 +1,14 @@
-﻿namespace Calculator
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Calculator
 {
     partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -28,150 +31,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbFirstValue = new System.Windows.Forms.TextBox();
-            this.tbSecondValue = new System.Windows.Forms.TextBox();
-            this.tbResult = new System.Windows.Forms.TextBox();
-            this.bthPlus = new System.Windows.Forms.Button();
-            this.bthMinus = new System.Windows.Forms.Button();
-            this.bthDivide = new System.Windows.Forms.Button();
-            this.bthMultiply = new System.Windows.Forms.Button();
-            this.bthClear = new System.Windows.Forms.Button();
-            this.bthExit = new System.Windows.Forms.Button();
-            this.bthSin = new System.Windows.Forms.Button();
-            this.bthCos = new System.Windows.Forms.Button();
+            this.FirstValue = new System.Windows.Forms.TextBox();
+            this.SecondValue = new System.Windows.Forms.TextBox();
+            this.Result = new System.Windows.Forms.TextBox();
+            this.Plus = new System.Windows.Forms.Button();
+            this.Minus = new System.Windows.Forms.Button();
+            this.Divide = new System.Windows.Forms.Button();
+            this.Multiply = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
+            this.Sin = new System.Windows.Forms.Button();
+            this.Cos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // tbFirstValue
+            // FirstValue
             // 
-            this.tbFirstValue.Location = new System.Drawing.Point(12, 38);
-            this.tbFirstValue.Name = "tbFirstValue";
-            this.tbFirstValue.Size = new System.Drawing.Size(129, 20);
-            this.tbFirstValue.TabIndex = 0;
-            this.tbFirstValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstValue_KeyPress);
+            this.FirstValue.Location = new System.Drawing.Point(12, 38);
+            this.FirstValue.Name = "FirstValue";
+            this.FirstValue.Size = new System.Drawing.Size(129, 20);
+            this.FirstValue.TabIndex = 0;
+            this.FirstValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstValueKeyPress);
             // 
-            // tbSecondValue
+            // SecondValue
             // 
-            this.tbSecondValue.Location = new System.Drawing.Point(147, 38);
-            this.tbSecondValue.Name = "tbSecondValue";
-            this.tbSecondValue.Size = new System.Drawing.Size(131, 20);
-            this.tbSecondValue.TabIndex = 1;
-            this.tbSecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFirstValue_KeyPress);
+            this.SecondValue.Location = new System.Drawing.Point(147, 38);
+            this.SecondValue.Name = "SecondValue";
+            this.SecondValue.Size = new System.Drawing.Size(131, 20);
+            this.SecondValue.TabIndex = 1;
+            this.SecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstValueKeyPress);
             // 
-            // tbResult
+            // Result
             // 
-            this.tbResult.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tbResult.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbResult.Enabled = false;
-            this.tbResult.Location = new System.Drawing.Point(12, 12);
-            this.tbResult.Name = "tbResult";
-            this.tbResult.ReadOnly = true;
-            this.tbResult.Size = new System.Drawing.Size(266, 20);
-            this.tbResult.TabIndex = 2;
+            this.Result.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Result.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Result.Enabled = false;
+            this.Result.Location = new System.Drawing.Point(12, 12);
+            this.Result.Name = "Result";
+            this.Result.ReadOnly = true;
+            this.Result.Size = new System.Drawing.Size(266, 20);
+            this.Result.TabIndex = 2;
             // 
-            // bthPlus
+            // Plus
             // 
-            this.bthPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthPlus.Location = new System.Drawing.Point(13, 65);
-            this.bthPlus.Name = "bthPlus";
-            this.bthPlus.Size = new System.Drawing.Size(61, 47);
-            this.bthPlus.TabIndex = 3;
-            this.bthPlus.Text = "+";
-            this.bthPlus.UseVisualStyleBackColor = true;
-            this.bthPlus.Click += new System.EventHandler(this.bthPlus_Click);
+            this.Plus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Plus.Location = new System.Drawing.Point(13, 65);
+            this.Plus.Name = "Plus";
+            this.Plus.Size = new System.Drawing.Size(61, 47);
+            this.Plus.TabIndex = 3;
+            this.Plus.Text = "+";
+            this.Plus.UseVisualStyleBackColor = true;
+            this.Plus.Click += new System.EventHandler(this.PlusClick);
             // 
-            // bthMinus
+            // Minus
             // 
-            this.bthMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthMinus.Location = new System.Drawing.Point(80, 65);
-            this.bthMinus.Name = "bthMinus";
-            this.bthMinus.Size = new System.Drawing.Size(61, 47);
-            this.bthMinus.TabIndex = 4;
-            this.bthMinus.Text = "-";
-            this.bthMinus.UseVisualStyleBackColor = true;
-            this.bthMinus.Click += new System.EventHandler(this.bthPlus_Click);
+            this.Minus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Minus.Location = new System.Drawing.Point(80, 65);
+            this.Minus.Name = "Minus";
+            this.Minus.Size = new System.Drawing.Size(61, 47);
+            this.Minus.TabIndex = 4;
+            this.Minus.Text = "-";
+            this.Minus.UseVisualStyleBackColor = true;
+            this.Minus.Click += new System.EventHandler(this.PlusClick);
             // 
-            // bthDivide
+            // Divide
             // 
-            this.bthDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthDivide.Location = new System.Drawing.Point(217, 65);
-            this.bthDivide.Name = "bthDivide";
-            this.bthDivide.Size = new System.Drawing.Size(61, 47);
-            this.bthDivide.TabIndex = 5;
-            this.bthDivide.Text = "/";
-            this.bthDivide.UseVisualStyleBackColor = true;
-            this.bthDivide.Click += new System.EventHandler(this.bthPlus_Click);
+            this.Divide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Divide.Location = new System.Drawing.Point(217, 65);
+            this.Divide.Name = "Divide";
+            this.Divide.Size = new System.Drawing.Size(61, 47);
+            this.Divide.TabIndex = 5;
+            this.Divide.Text = "/";
+            this.Divide.UseVisualStyleBackColor = true;
+            this.Divide.Click += new System.EventHandler(this.PlusClick);
             // 
-            // bthMultiply
+            // Multiply
             // 
-            this.bthMultiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthMultiply.Location = new System.Drawing.Point(147, 65);
-            this.bthMultiply.Name = "bthMultiply";
-            this.bthMultiply.Size = new System.Drawing.Size(61, 47);
-            this.bthMultiply.TabIndex = 6;
-            this.bthMultiply.Text = "*";
-            this.bthMultiply.UseVisualStyleBackColor = true;
-            this.bthMultiply.Click += new System.EventHandler(this.bthPlus_Click);
+            this.Multiply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Multiply.Location = new System.Drawing.Point(150, 64);
+            this.Multiply.Name = "Multiply";
+            this.Multiply.Size = new System.Drawing.Size(61, 47);
+            this.Multiply.TabIndex = 6;
+            this.Multiply.Text = "*";
+            this.Multiply.UseVisualStyleBackColor = true;
+            this.Multiply.Click += new System.EventHandler(this.PlusClick);
             // 
-            // bthClear
+            // Clear
             // 
-            this.bthClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthClear.Location = new System.Drawing.Point(13, 166);
-            this.bthClear.Name = "bthClear";
-            this.bthClear.Size = new System.Drawing.Size(128, 37);
-            this.bthClear.TabIndex = 7;
-            this.bthClear.Text = "Clear";
-            this.bthClear.UseVisualStyleBackColor = true;
-            this.bthClear.Click += new System.EventHandler(this.btClear_Click);
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Clear.Location = new System.Drawing.Point(13, 166);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(265, 37);
+            this.Clear.TabIndex = 7;
+            this.Clear.Text = "Clear";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.ClearClick);
             // 
-            // bthExit
+            // Sin
             // 
-            this.bthExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthExit.Location = new System.Drawing.Point(150, 166);
-            this.bthExit.Name = "bthExit";
-            this.bthExit.Size = new System.Drawing.Size(128, 37);
-            this.bthExit.TabIndex = 8;
-            this.bthExit.Text = "Exit";
-            this.bthExit.UseVisualStyleBackColor = true;
-            this.bthExit.Click += new System.EventHandler(this.bthExit_Click);
+            this.Sin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Sin.Location = new System.Drawing.Point(13, 113);
+            this.Sin.Name = "Sin";
+            this.Sin.Size = new System.Drawing.Size(128, 47);
+            this.Sin.TabIndex = 10;
+            this.Sin.Text = "SIN";
+            this.Sin.UseVisualStyleBackColor = true;
+            this.Sin.Click += new System.EventHandler(this.SinClick);
             // 
-            // bthSin
+            // Cos
             // 
-            this.bthSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthSin.Location = new System.Drawing.Point(13, 113);
-            this.bthSin.Name = "bthSin";
-            this.bthSin.Size = new System.Drawing.Size(128, 47);
-            this.bthSin.TabIndex = 10;
-            this.bthSin.Text = "SIN";
-            this.bthSin.UseVisualStyleBackColor = true;
-            this.bthSin.Click += new System.EventHandler(this.bthSin_Click);
-            // 
-            // bthCos
-            // 
-            this.bthCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bthCos.Location = new System.Drawing.Point(150, 113);
-            this.bthCos.Name = "bthCos";
-            this.bthCos.Size = new System.Drawing.Size(128, 47);
-            this.bthCos.TabIndex = 10;
-            this.bthCos.Text = "Cos";
-            this.bthCos.UseVisualStyleBackColor = true;
-            this.bthCos.Click += new System.EventHandler(this.bthSin_Click);
+            this.Cos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Cos.Location = new System.Drawing.Point(150, 113);
+            this.Cos.Name = "Cos";
+            this.Cos.Size = new System.Drawing.Size(128, 47);
+            this.Cos.TabIndex = 10;
+            this.Cos.Text = "Cos";
+            this.Cos.UseVisualStyleBackColor = true;
+            this.Cos.Click += new System.EventHandler(this.SinClick);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(282, 215);
-            this.Controls.Add(this.bthCos);
-            this.Controls.Add(this.bthSin);
-            this.Controls.Add(this.bthExit);
-            this.Controls.Add(this.bthClear);
-            this.Controls.Add(this.bthMultiply);
-            this.Controls.Add(this.bthDivide);
-            this.Controls.Add(this.bthMinus);
-            this.Controls.Add(this.bthPlus);
-            this.Controls.Add(this.tbResult);
-            this.Controls.Add(this.tbSecondValue);
-            this.Controls.Add(this.tbFirstValue);
+            this.Controls.Add(this.Cos);
+            this.Controls.Add(this.Sin);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Multiply);
+            this.Controls.Add(this.Divide);
+            this.Controls.Add(this.Minus);
+            this.Controls.Add(this.Plus);
+            this.Controls.Add(this.Result);
+            this.Controls.Add(this.SecondValue);
+            this.Controls.Add(this.FirstValue);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -183,17 +173,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbFirstValue;
-        private System.Windows.Forms.TextBox tbSecondValue;
-        private System.Windows.Forms.TextBox tbResult;
-        private System.Windows.Forms.Button bthPlus;
-        private System.Windows.Forms.Button bthMinus;
-        private System.Windows.Forms.Button bthDivide;
-        private System.Windows.Forms.Button bthMultiply;
-        private System.Windows.Forms.Button bthClear;
-        private System.Windows.Forms.Button bthExit;
-        private System.Windows.Forms.Button bthSin;
-        private System.Windows.Forms.Button bthCos;
+        private TextBox FirstValue;
+        private TextBox SecondValue;
+        private TextBox Result;
+        private Button Plus;
+        private Button Minus;
+        private Button Divide;
+        private Button Multiply;
+        private Button Clear;
+        private Button Sin;
+        private Button Cos;
     }
 }
 
