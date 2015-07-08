@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Sqrt : IOneArgument
+    public class Sqrt : IOneArgument
     {
         public double Calculate(double x)
         {

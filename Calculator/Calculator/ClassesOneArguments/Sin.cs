@@ -2,7 +2,7 @@
 
 namespace Calculator 
 {
-    class Sin : IOneArgument
+    public class Sin : IOneArgument
     {
         public double Calculate(double x)
         {

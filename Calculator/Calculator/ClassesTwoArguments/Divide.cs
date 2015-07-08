@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    class Divide : ITwoArgument
+    public class Divide : ITwoArgument
     {
         public double Calculate(double x, double y)
         {

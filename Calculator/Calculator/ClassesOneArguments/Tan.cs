@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Tan : IOneArgument
+    public class Tan : IOneArgument
     {
         public double Calculate(double x)
         {

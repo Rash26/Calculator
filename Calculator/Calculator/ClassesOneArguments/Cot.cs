@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Cot : IOneArgument
+    public class Cot : IOneArgument
     {
         public double Calculate(double x)
         {

@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    class Minus : ITwoArgument
+    public class Minus : ITwoArgument
     {
         public double Calculate(double x, double y)
         {

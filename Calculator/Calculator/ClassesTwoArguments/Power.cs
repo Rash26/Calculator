@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Power : ITwoArgument
+    public class Power : ITwoArgument
     {
         public double Calculate(double x, double y)
         {

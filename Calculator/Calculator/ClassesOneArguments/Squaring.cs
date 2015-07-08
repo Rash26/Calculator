@@ -2,7 +2,7 @@
 
 namespace Calculator
 {
-    class Squaring : IOneArgument
+    public class Squaring : IOneArgument
     {
         public double Calculate(double x)
         {
