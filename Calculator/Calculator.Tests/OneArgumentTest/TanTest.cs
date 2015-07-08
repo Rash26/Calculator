@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
@@ -13,6 +14,14 @@ namespace Calculator.Tests
             var calculator = new Tan();
             var testResult = calculator.Calculate(firstArgument);
             Assert.AreEqual(output, testResult, 0.0000001);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void TangensNaNTest()
+        {
+            var calculator = new Tan();
+            var result = calculator.Calculate(90);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
@@ -13,6 +14,14 @@ namespace Calculator.Tests
             var calculator = new Cot();
             var testResult = calculator.Calculate(firstArgument);
             Assert.AreEqual(output, testResult, 0.001);
+        }
+
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void CotangensNaNTest()
+        {
+            var calculator = new Cot();
+            var result = calculator.Calculate(180);
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Calculator.Tests
         [TestCase(0, 0)]
         [TestCase(90, 1)]
         [TestCase(180, 0)]
-        [TestCase(10, 10)]
+        [TestCase(270, -1)]
         public void TestSin(double firstArgument, double output)
         {
             var calculator = new Sin();

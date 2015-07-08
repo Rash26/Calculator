@@ -7,7 +7,7 @@ namespace Calculator.Tests
         [TestCase(25, 5)]
         [TestCase(36, 6)]
         [TestCase(144, 12)]
-        [TestCase(3, 20)]
+        [TestCase(9, 3)]
         public void TestSqrt(double firstArgument, double output)
         {
             var calculator = new Sqrt();

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace Calculator.Tests
 {
@@ -13,6 +14,14 @@ namespace Calculator.Tests
             var calculator = new Divide();
             var testResult = calculator.Calculate(firstArgument, secondArgument);
             Assert.AreEqual(output, testResult, 0.0000001);
+        }
+
+        [Test]
+        [ExpectedException(typeof (Exception))]
+        public void DivideZeroTest()
+        {
+            var calculator = new Divide();
+            var result = calculator.Calculate(4, 0);
         }
     }
 }
