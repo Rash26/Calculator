@@ -12,7 +12,7 @@ namespace Calculator.Tests
         {
             var calculator = new Sin();
             var testResult = calculator.Calculate(firstArgument);
-            Assert.AreEqual(testResult, output, 0.00001);
+            Assert.AreEqual(output, testResult, 0.0000001);
         }
     }
 }

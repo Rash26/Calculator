@@ -12,7 +12,7 @@ namespace Calculator.Tests
         {
             var calculator = new Sqrt();
             var testResult = calculator.Calculate(firstArgument);
-            Assert.AreEqual(testResult, output);
+            Assert.AreEqual(output, testResult, 0.0000001);
         }
     }
 }

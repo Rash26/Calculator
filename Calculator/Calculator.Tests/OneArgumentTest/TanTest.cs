@@ -7,12 +7,12 @@ namespace Calculator.Tests
         [TestCase(0, 0)]
         [TestCase(45, 1)]
         [TestCase(180, 0)]
-        [TestCase(3, 20)]
+        [TestCase(360, 0)]
         public void TestTan(double firstArgument, double output)
         {
             var calculator = new Tan();
             var testResult = calculator.Calculate(firstArgument);
-            Assert.AreEqual(testResult, output, 0.0000001);
+            Assert.AreEqual(output, testResult, 0.0000001);
         }
     }
 }
