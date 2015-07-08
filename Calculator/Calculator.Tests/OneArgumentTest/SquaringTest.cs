@@ -1,7 +1,7 @@
-﻿using System.Runtime.InteropServices.ComTypes;
+﻿using Calculator.ClassesOneArguments;
 using NUnit.Framework;
 
-namespace Calculator.Tests
+namespace Calculator.Tests.OneArgumentTest
 {
     public class SquaringTest
     {

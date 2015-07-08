@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassesSorts\FactorySort.cs" />
+    <Compile Include="ClassesSorts\InterfaceSort.cs" />
+    <Compile Include="ClassesSorts\SelectionSort.cs" />
     <Compile Include="ClassesTwoArguments\Added.cs" />
     <Compile Include="ClassesOneArguments\Cos.cs" />
     <Compile Include="ClassesOneArguments\Cot.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="ClassesOneArguments\Squaring.cs" />
     <Compile Include="ClassesOneArguments\Tan.cs" />
     <Compile Include="ClassesTwoArguments\TwoArgument.cs" />
+    <Compile Include="ClassesSorts\BubbleSorts.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

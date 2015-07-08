@@ -46,6 +46,10 @@ namespace Calculator
             this.Sqrt = new System.Windows.Forms.Button();
             this.Power = new System.Windows.Forms.Button();
             this.Squaring = new System.Windows.Forms.Button();
+            this.Bubble = new System.Windows.Forms.Button();
+            this.SelectionSort = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstValue
@@ -207,11 +211,59 @@ namespace Calculator
             this.Squaring.UseVisualStyleBackColor = true;
             this.Squaring.Click += new System.EventHandler(this.SinClick);
             // 
+            // Bubble
+            // 
+            this.Bubble.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Bubble.Location = new System.Drawing.Point(13, 262);
+            this.Bubble.Name = "Bubble";
+            this.Bubble.Size = new System.Drawing.Size(61, 47);
+            this.Bubble.TabIndex = 13;
+            this.Bubble.Text = "1";
+            this.Bubble.UseVisualStyleBackColor = true;
+            this.Bubble.Click += new System.EventHandler(this.Sorting_Click);
+            // 
+            // SelectionSort
+            // 
+            this.SelectionSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectionSort.Location = new System.Drawing.Point(80, 262);
+            this.SelectionSort.Name = "SelectionSort";
+            this.SelectionSort.Size = new System.Drawing.Size(61, 47);
+            this.SelectionSort.TabIndex = 13;
+            this.SelectionSort.Text = "2";
+            this.SelectionSort.UseVisualStyleBackColor = true;
+            this.SelectionSort.Click += new System.EventHandler(this.Sorting_Click);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(150, 262);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(61, 47);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.Sorting_Click);
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(216, 262);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(61, 47);
+            this.button4.TabIndex = 13;
+            this.button4.Text = "4";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Sorting_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 265);
+            this.ClientSize = new System.Drawing.Size(294, 367);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.SelectionSort);
+            this.Controls.Add(this.Bubble);
             this.Controls.Add(this.Squaring);
             this.Controls.Add(this.Power);
             this.Controls.Add(this.Sqrt);
@@ -253,6 +305,10 @@ namespace Calculator
         private Button Sqrt;
         private Button Power;
         private Button Squaring;
+        private Button Bubble;
+        private Button SelectionSort;
+        private Button button3;
+        private Button button4;
     }
 }
 

@@ -1,7 +1,8 @@
 ﻿using System;
+using Calculator.ClassesOneArguments;
 using NUnit.Framework;
 
-namespace Calculator.Tests
+namespace Calculator.Tests.OneArgumentTest
 {
     public class TanTest
     {

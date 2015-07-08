@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Calculator
+namespace Calculator.ClassesOneArguments
 {
     public static class FactoryOneArgument
     {
@@ -20,6 +20,7 @@ namespace Calculator
                     return new Sqrt();
                 case "Squaring":
                     return new Squaring();
+                
 
                 default:
                     throw new Exception("Неизвестная операция");

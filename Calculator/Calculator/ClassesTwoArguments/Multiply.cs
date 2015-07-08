@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.ClassesTwoArguments
 {
     public class Multiply : ITwoArgument
     {

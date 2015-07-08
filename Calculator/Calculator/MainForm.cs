@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using System.Windows.Forms;
+using Calculator.ClassesOneArguments;
+using Calculator.ClassesSorts;
+using Calculator.ClassesTwoArguments;
 
 namespace Calculator
 {
@@ -24,7 +27,7 @@ namespace Calculator
             {
 
             }
-            else if (e.KeyChar == ',' || e.KeyChar == '-' || e.KeyChar == '.')
+            else if (e.KeyChar == ',' || e.KeyChar == '-' || e.KeyChar == '.' || e.KeyChar == ' ')
             {
 
             }
@@ -49,6 +52,15 @@ namespace Calculator
             var calculate = FactoryOneArgument.CreatCalculator(nameButton);
             var firstArgument = Convert.ToDouble(FirstValue.Text);
             Result.Text = calculate.Calculate(firstArgument).ToString();
+        }
+
+        private void Sorting_Click(object sender, EventArgs e)
+        {
+            var nameButton = ((Button)sender).Name;
+            var calculate = FactorySort.CreatCalculator(nameButton);
+            var firstArgument = FirstValue.Text;
+            Result.Text = calculate.Sort(firstArgument);
+
         }
     }
 }

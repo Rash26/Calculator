@@ -1,4 +1,4 @@
-﻿namespace Calculator
+﻿namespace Calculator.ClassesOneArguments
 {
     public interface IOneArgument
     {

@@ -1,7 +1,8 @@
 ﻿using System;
+using Calculator.ClassesTwoArguments;
 using NUnit.Framework;
 
-namespace Calculator.Tests
+namespace Calculator.Tests.TwoArgumentTest
 {
     public class DivideTest
     {
