@@ -66,6 +66,11 @@
     <Compile Include="OneArgumentTest\CosTest.cs" />
     <Compile Include="OneArgumentTest\CotTest.cs" />
     <Compile Include="OneArgumentTest\TanTest.cs" />
+    <Compile Include="TestSort\AbstractSortTest.cs" />
+    <Compile Include="TestSort\BubbleTest.cs" />
+    <Compile Include="TestSort\CombTest.cs" />
+    <Compile Include="TestSort\GnomeTest.cs" />
+    <Compile Include="TestSort\SelectionTest.cs" />
     <Compile Include="TwoArgumentTest\AddedTest.cs" />
     <Compile Include="TwoArgumentTest\DivideTest.cs" />
     <Compile Include="TwoArgumentTest\MinusTest.cs" />
@@ -89,6 +94,7 @@
     <Fakes Include="Fakes\nunit.util.fakes" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -59,8 +59,37 @@ namespace Calculator
             var nameButton = ((Button)sender).Name;
             var calculate = FactorySort.CreatCalculator(nameButton);
             var firstArgument = FirstValue.Text;
-            Result.Text = calculate.Sort(firstArgument);
+            Result.Text = IntToStr(calculate.Sort(StrToInt(firstArgument)));
 
+        }
+
+        public string IntToStr(int[] A)
+        {
+            string[] split = new string[A.Length];
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (i != A.Length - 1)
+                {
+                    split[i] = A[i].ToString() + " ";
+                }
+                else
+                {
+                    split[i] = A[i].ToString();
+                }
+            }
+            return string.Concat(split);
+        }
+
+        public int[] StrToInt(string argument)
+        {
+            string[] split = argument.Split(new char[] { ' ' });
+            int[] a = new int[split.Length];
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                a[i] = Convert.ToInt32(split[i]);
+            }
+            return a;
         }
     }
 }

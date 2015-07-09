@@ -4,16 +4,8 @@ namespace Calculator.ClassesSorts
 {
     public class CombSort : ISort
     {
-        public string Sort(string mass)
+        public int[] Sort(int[] A)
         {
-            string[] split = mass.Split(new char[] { ' ' });
-            int[] A = new int[split.Length];
-
-            for (int i = 0; i < A.Length; i++)
-            {
-                A[i] = Convert.ToInt32(split[i]);
-            }
-
             int gap = A.Length;
             bool swapped = true;
             while (gap > 1 || swapped)
@@ -35,14 +27,7 @@ namespace Calculator.ClassesSorts
                     i++;
                 }
             }
-
-            string g;
-            for (int i = 0; i < A.Length; i++)
-            {
-                split[i] = A[i].ToString() + " ";
-            }
-            g = string.Concat(split);
-            return g;
+            return A;
         }
     }
 }

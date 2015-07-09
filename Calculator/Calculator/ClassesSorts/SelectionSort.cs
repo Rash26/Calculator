@@ -4,15 +4,8 @@ namespace Calculator.ClassesSorts
 {
     public class SelectionSort : ISort
     {
-        public string Sort(string mass)
+        public int[] Sort(int[] A)
         {
-           string[] split = mass.Split(new char[] {' '});
-           int[] A= new int[split.Length];
-           for (int i = 0; i < A.Length; i++)
-           {
-               A[i] = Convert.ToInt32(split[i]);
-           }
-
            for (int i = 0; i < A.Length - 1; i++)
             {
                 int min = i;
@@ -27,14 +20,7 @@ namespace Calculator.ClassesSorts
                 A[i] = A[min];
                 A[min] = dummy;
             }
-
-           string g;
-           for (int i = 0; i < A.Length; i++)
-           {
-               split[i] = A[i].ToString() + " ";
-           }
-           g = string.Concat(split);
-           return g;
+            return A;
         }
     }
 }
