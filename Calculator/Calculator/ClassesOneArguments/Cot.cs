@@ -4,15 +4,15 @@ namespace Calculator.ClassesOneArguments
 {
     public class Cot : IOneArgument
     {
-        public double Calculate(double x)
+        public double Calculate(double argument)
         {
-            if (x == 0 || x == 180 || x == 360)
+            if (argument == 0 || argument == 180 || argument == 360)
             {
                 throw new Exception("Нельзя вычислить");
             }
             else
             {
-                return 1f / Math.Tan(x * Math.PI / 180);
+                return 1f / Math.Tan(argument * Math.PI / 180);
             }
         }
     }

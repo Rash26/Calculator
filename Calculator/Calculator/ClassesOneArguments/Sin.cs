@@ -4,9 +4,9 @@ namespace Calculator.ClassesOneArguments
 {
     public class Sin : IOneArgument
     {
-        public double Calculate(double x)
+        public double Calculate(double argument)
         {
-            return Math.Sin(x * Math.PI / 180);
+            return Math.Sin(argument * Math.PI / 180);
         }
     }
 }

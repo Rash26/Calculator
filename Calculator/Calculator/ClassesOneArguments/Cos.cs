@@ -4,9 +4,9 @@ namespace Calculator.ClassesOneArguments
 {
     public class Cos : IOneArgument
     {
-     public double Calculate(double x)
+     public double Calculate(double argument)
         {
-            return Math.Cos(x * Math.PI / 180);
+            return Math.Cos(argument * Math.PI / 180);
         }
     }
 }

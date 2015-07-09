@@ -4,15 +4,15 @@ namespace Calculator.ClassesOneArguments
 {
     public class Tan : IOneArgument
     {
-        public double Calculate(double x)
+        public double Calculate(double argument)
         {
-            if (x == 90 || x == 270)
+            if (argument == 90 || argument == 270)
             {
                 throw new Exception("Нельзя вычислить");
             }
             else
             {   
-                return Math.Tan(x * Math.PI / 180);
+                return Math.Tan(argument * Math.PI / 180);
             }
         }
     }

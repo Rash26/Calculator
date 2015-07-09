@@ -1,24 +1,22 @@
-﻿using System;
-
-namespace Calculator.ClassesSorts
+﻿namespace Calculator.ClassesSorts
 {
     public class BubbleSorts : ISort
     {
-       public int[] Sort(int[] A)
+       public int[] Sort(int[] source)
        {
-            for (int i = 0; i < A.Length; i++)
+            for (int i = 0; i < source.Length; i++)
             {
-                for (int j = i + 1; j < A.Length; j++)
+                for (int j = i + 1; j < source.Length; j++)
                 {
-                    if (A[j] < A[i])
+                    if (source[j] < source[i])
                     {
-                        var temp = A[i];
-                        A[i] = A[j];
-                        A[j] = temp;
+                        var temp = source[i];
+                        source[i] = source[j];
+                        source[j] = temp;
                     }
                 }
             }
-           return A;
+           return source;
        }
     }
 }

@@ -2,9 +2,9 @@
 {
     public class Squaring : IOneArgument
     {
-        public double Calculate(double x)
+        public double Calculate(double argument)
         {
-            return x*x;
+            return argument * argument;
         }
     }
 }

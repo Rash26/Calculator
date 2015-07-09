@@ -6,8 +6,7 @@ namespace Calculator.Tests.TestSort
     public class SelectionTest : AbstractSortTest
     {
         [SetUp]
-
-        public void initialize()
+        public void Initialize()
         {
             Sorter=new SelectionSort();
         }

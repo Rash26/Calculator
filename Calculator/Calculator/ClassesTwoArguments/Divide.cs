@@ -4,11 +4,11 @@ namespace Calculator.ClassesTwoArguments
 {
     public class Divide : ITwoArgument
     {
-        public double Calculate(double x, double y)
+        public double Calculate(double argumentOne, double argumentTwo)
         {
-            if (y != 0)
+            if (argumentTwo != 0)
             {
-                return x / y;
+                return argumentOne / argumentTwo;
             }
             else
             {

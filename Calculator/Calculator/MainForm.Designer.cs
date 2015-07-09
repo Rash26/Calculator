@@ -88,7 +88,7 @@ namespace Calculator
             this.Added.TabIndex = 3;
             this.Added.Text = "+";
             this.Added.UseVisualStyleBackColor = true;
-            this.Added.Click += new System.EventHandler(this.PlusClick);
+            this.Added.Click += new System.EventHandler(this.TwoArgument);
             // 
             // Minus
             // 
@@ -99,7 +99,7 @@ namespace Calculator
             this.Minus.TabIndex = 4;
             this.Minus.Text = "-";
             this.Minus.UseVisualStyleBackColor = true;
-            this.Minus.Click += new System.EventHandler(this.PlusClick);
+            this.Minus.Click += new System.EventHandler(this.TwoArgument);
             // 
             // Divide
             // 
@@ -110,7 +110,7 @@ namespace Calculator
             this.Divide.TabIndex = 5;
             this.Divide.Text = "/";
             this.Divide.UseVisualStyleBackColor = true;
-            this.Divide.Click += new System.EventHandler(this.PlusClick);
+            this.Divide.Click += new System.EventHandler(this.TwoArgument);
             // 
             // Multiply
             // 
@@ -121,7 +121,7 @@ namespace Calculator
             this.Multiply.TabIndex = 6;
             this.Multiply.Text = "*";
             this.Multiply.UseVisualStyleBackColor = true;
-            this.Multiply.Click += new System.EventHandler(this.PlusClick);
+            this.Multiply.Click += new System.EventHandler(this.TwoArgument);
             // 
             // Clear
             // 
@@ -143,7 +143,7 @@ namespace Calculator
             this.Sin.TabIndex = 10;
             this.Sin.Text = "SIN";
             this.Sin.UseVisualStyleBackColor = true;
-            this.Sin.Click += new System.EventHandler(this.SinClick);
+            this.Sin.Click += new System.EventHandler(this.OneArgument);
             // 
             // Cos
             // 
@@ -154,7 +154,7 @@ namespace Calculator
             this.Cos.TabIndex = 10;
             this.Cos.Text = "Cos";
             this.Cos.UseVisualStyleBackColor = true;
-            this.Cos.Click += new System.EventHandler(this.SinClick);
+            this.Cos.Click += new System.EventHandler(this.OneArgument);
             // 
             // Tan
             // 
@@ -165,7 +165,7 @@ namespace Calculator
             this.Tan.TabIndex = 10;
             this.Tan.Text = "Tan";
             this.Tan.UseVisualStyleBackColor = true;
-            this.Tan.Click += new System.EventHandler(this.SinClick);
+            this.Tan.Click += new System.EventHandler(this.OneArgument);
             // 
             // Cot
             // 
@@ -176,7 +176,7 @@ namespace Calculator
             this.Cot.TabIndex = 10;
             this.Cot.Text = "Cot";
             this.Cot.UseVisualStyleBackColor = true;
-            this.Cot.Click += new System.EventHandler(this.SinClick);
+            this.Cot.Click += new System.EventHandler(this.OneArgument);
             // 
             // Sqrt
             // 
@@ -187,7 +187,7 @@ namespace Calculator
             this.Sqrt.TabIndex = 11;
             this.Sqrt.Text = "√";
             this.Sqrt.UseVisualStyleBackColor = true;
-            this.Sqrt.Click += new System.EventHandler(this.SinClick);
+            this.Sqrt.Click += new System.EventHandler(this.OneArgument);
             // 
             // Power
             // 
@@ -198,7 +198,7 @@ namespace Calculator
             this.Power.TabIndex = 12;
             this.Power.Text = "x^y";
             this.Power.UseVisualStyleBackColor = true;
-            this.Power.Click += new System.EventHandler(this.PlusClick);
+            this.Power.Click += new System.EventHandler(this.TwoArgument);
             // 
             // Squaring
             // 
@@ -209,7 +209,7 @@ namespace Calculator
             this.Squaring.TabIndex = 13;
             this.Squaring.Text = "x^2";
             this.Squaring.UseVisualStyleBackColor = true;
-            this.Squaring.Click += new System.EventHandler(this.SinClick);
+            this.Squaring.Click += new System.EventHandler(this.OneArgument);
             // 
             // Bubble
             // 
@@ -220,7 +220,7 @@ namespace Calculator
             this.Bubble.TabIndex = 13;
             this.Bubble.Text = "BubbleSorts";
             this.Bubble.UseVisualStyleBackColor = true;
-            this.Bubble.Click += new System.EventHandler(this.Sorting_Click);
+            this.Bubble.Click += new System.EventHandler(this.SortingClick);
             // 
             // SelectionSort
             // 
@@ -231,7 +231,7 @@ namespace Calculator
             this.SelectionSort.TabIndex = 13;
             this.SelectionSort.Text = "SelectionSorts";
             this.SelectionSort.UseVisualStyleBackColor = true;
-            this.SelectionSort.Click += new System.EventHandler(this.Sorting_Click);
+            this.SelectionSort.Click += new System.EventHandler(this.SortingClick);
             // 
             // GnomeSort
             // 
@@ -243,7 +243,7 @@ namespace Calculator
             this.GnomeSort.TabIndex = 13;
             this.GnomeSort.Text = "GnomeSort";
             this.GnomeSort.UseVisualStyleBackColor = true;
-            this.GnomeSort.Click += new System.EventHandler(this.Sorting_Click);
+            this.GnomeSort.Click += new System.EventHandler(this.SortingClick);
             // 
             // CombSort
             // 
@@ -254,7 +254,7 @@ namespace Calculator
             this.CombSort.TabIndex = 13;
             this.CombSort.Text = "CombSort";
             this.CombSort.UseVisualStyleBackColor = true;
-            this.CombSort.Click += new System.EventHandler(this.Sorting_Click);
+            this.CombSort.Click += new System.EventHandler(this.SortingClick);
             // 
             // MainForm
             // 

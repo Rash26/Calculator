@@ -22,7 +22,7 @@ namespace Calculator.Tests.OneArgumentTest
         public void CotangensNaNTest()
         {
             var calculator = new Cot();
-            var result = calculator.Calculate(180);
+            calculator.Calculate(180);
         }
     }
 }

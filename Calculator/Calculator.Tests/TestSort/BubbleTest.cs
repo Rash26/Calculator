@@ -6,8 +6,7 @@ namespace Calculator.Tests.TestSort
     public class BubbleTest : AbstractSortTest
     {
         [SetUp]
-
-        public void initialize()
+        public void Initialize()
         {
             Sorter = new BubbleSorts();
         }

@@ -4,9 +4,9 @@ namespace Calculator.ClassesOneArguments
 {
     public class Sqrt : IOneArgument
     {
-        public double Calculate(double x)
+        public double Calculate(double argument)
         {
-            return Math.Sqrt(x);
+            return Math.Sqrt(argument);
         }
     }
 }

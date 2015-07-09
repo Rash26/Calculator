@@ -22,7 +22,7 @@ namespace Calculator.Tests.TwoArgumentTest
         public void DivideZeroTest()
         {
             var calculator = new Divide();
-            var result = calculator.Calculate(4, 0);
+            calculator.Calculate(4, 0);
         }
     }
 }

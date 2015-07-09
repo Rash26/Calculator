@@ -2,9 +2,9 @@
 {
     public class Added : ITwoArgument
     {
-        public double Calculate(double x, double y)
+        public double Calculate(double argumentOne, double argumentTwo)
         {
-            return x + y;
+            return argumentOne + argumentTwo;
         }
     }
 }

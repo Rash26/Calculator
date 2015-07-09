@@ -22,7 +22,7 @@ namespace Calculator.Tests.OneArgumentTest
         public void TangensNaNTest()
         {
             var calculator = new Tan();
-            var result = calculator.Calculate(90);
+            calculator.Calculate(90);
         }
     }
 }

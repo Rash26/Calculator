@@ -2,6 +2,6 @@
 {
     public interface ITwoArgument
     {
-        double Calculate(double x, double y);
+        double Calculate(double argumentOne, double argumentTwo);
     }
 }

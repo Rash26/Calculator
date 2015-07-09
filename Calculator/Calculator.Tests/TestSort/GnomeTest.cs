@@ -6,8 +6,7 @@ namespace Calculator.Tests.TestSort
     public class GnomeTest : AbstractSortTest
     {
         [SetUp]
-
-        public void initialize()
+        public void Initialize()
         {
             Sorter = new GnomeSort();
         }

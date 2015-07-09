@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Windows.Forms;
 using Calculator.ClassesOneArguments;
 using Calculator.ClassesSorts;
@@ -37,16 +36,16 @@ namespace Calculator
             }
         }
 
-        private void PlusClick(object sender, EventArgs e)
+        private void TwoArgument(object sender, EventArgs e)
         {
-            var nameButton = ((Button)sender).Name;
+            var nameButton = ((Button) sender).Name;
             var calculate = FactoryTwoArgument.CreatCalculator(nameButton);
             var firstArgument = Convert.ToDouble(FirstValue.Text);
             var secondArgument = Convert.ToDouble(SecondValue.Text);
             Result.Text = calculate.Calculate(firstArgument, secondArgument).ToString();
         }
 
-        private void SinClick(object sender, EventArgs e)
+        private void OneArgument(object sender, EventArgs e)
         {
             var nameButton = ((Button) sender).Name;
             var calculate = FactoryOneArgument.CreatCalculator(nameButton);
@@ -54,36 +53,36 @@ namespace Calculator
             Result.Text = calculate.Calculate(firstArgument).ToString();
         }
 
-        private void Sorting_Click(object sender, EventArgs e)
+        private void SortingClick(object sender, EventArgs e)
         {
-            var nameButton = ((Button)sender).Name;
+            var nameButton = ((Button) sender).Name;
             var calculate = FactorySort.CreatCalculator(nameButton);
             var firstArgument = FirstValue.Text;
             Result.Text = IntToStr(calculate.Sort(StrToInt(firstArgument)));
 
         }
 
-        public string IntToStr(int[] A)
+        private static string IntToStr(int[] a)
         {
-            string[] split = new string[A.Length];
-            for (int i = 0; i < A.Length; i++)
+            string[] split = new string[a.Length];
+            for (int i = 0; i < a.Length; i++)
             {
-                if (i != A.Length - 1)
+                if (i != a.Length - 1)
                 {
-                    split[i] = A[i].ToString() + " ";
+                    split[i] = a[i].ToString() + " ";
                 }
                 else
                 {
-                    split[i] = A[i].ToString();
+                    split[i] = a[i].ToString();
                 }
             }
             return string.Concat(split);
         }
 
-        public int[] StrToInt(string argument)
+        private static int[] StrToInt(string argument)
         {
-            string[] split = argument.Split(new char[] { ' ' });
-            int[] a = new int[split.Length];
+            var split = argument.Split(' ');
+            var a = new int[split.Length];
 
             for (int i = 0; i < a.Length; i++)
             {

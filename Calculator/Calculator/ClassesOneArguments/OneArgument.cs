@@ -2,6 +2,6 @@
 {
     public interface IOneArgument
     {
-        double Calculate(double x);
+        double Calculate(double argument);
     }
 }

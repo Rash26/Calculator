@@ -1,26 +1,24 @@
-﻿using System;
-
-namespace Calculator.ClassesSorts
+﻿namespace Calculator.ClassesSorts
 {
     public class SelectionSort : ISort
     {
-        public int[] Sort(int[] A)
+        public int[] Sort(int[] sourse)
         {
-           for (int i = 0; i < A.Length - 1; i++)
+           for (int i = 0; i < sourse.Length - 1; i++)
             {
                 int min = i;
-                for (int j = i + 1; j < A.Length; j++)
+                for (int j = i + 1; j < sourse.Length; j++)
                 {
-                    if (A[j] < A[min])
+                    if (sourse[j] < sourse[min])
                     {
                         min = j;
                     }
                 }
-                int dummy = A[i];
-                A[i] = A[min];
-                A[min] = dummy;
+                int dummy = sourse[i];
+                sourse[i] = sourse[min];
+                sourse[min] = dummy;
             }
-            return A;
+            return sourse;
         }
     }
 }

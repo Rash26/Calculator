@@ -20,7 +20,6 @@ namespace Calculator.ClassesOneArguments
                     return new Sqrt();
                 case "Squaring":
                     return new Squaring();
-                
 
                 default:
                     throw new Exception("Неизвестная операция");
