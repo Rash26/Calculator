@@ -48,8 +48,8 @@ namespace Calculator
             this.Squaring = new System.Windows.Forms.Button();
             this.Bubble = new System.Windows.Forms.Button();
             this.SelectionSort = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.GnomeSort = new System.Windows.Forms.Button();
+            this.CombSort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FirstValue
@@ -233,35 +233,36 @@ namespace Calculator
             this.SelectionSort.UseVisualStyleBackColor = true;
             this.SelectionSort.Click += new System.EventHandler(this.Sorting_Click);
             // 
-            // button3
+            // GnomeSort
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(14, 315);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 47);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Sorting_Click);
+            this.GnomeSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold);
+            this.GnomeSort.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GnomeSort.Location = new System.Drawing.Point(14, 315);
+            this.GnomeSort.Name = "GnomeSort";
+            this.GnomeSort.Size = new System.Drawing.Size(127, 47);
+            this.GnomeSort.TabIndex = 13;
+            this.GnomeSort.Text = "GnomeSort";
+            this.GnomeSort.UseVisualStyleBackColor = true;
+            this.GnomeSort.Click += new System.EventHandler(this.Sorting_Click);
             // 
-            // button4
+            // CombSort
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(147, 315);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(130, 47);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Sorting_Click);
+            this.CombSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold);
+            this.CombSort.Location = new System.Drawing.Point(147, 315);
+            this.CombSort.Name = "CombSort";
+            this.CombSort.Size = new System.Drawing.Size(130, 47);
+            this.CombSort.TabIndex = 13;
+            this.CombSort.Text = "CombSort";
+            this.CombSort.UseVisualStyleBackColor = true;
+            this.CombSort.Click += new System.EventHandler(this.Sorting_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(294, 367);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.CombSort);
+            this.Controls.Add(this.GnomeSort);
             this.Controls.Add(this.SelectionSort);
             this.Controls.Add(this.Bubble);
             this.Controls.Add(this.Squaring);
@@ -307,8 +308,8 @@ namespace Calculator
         private Button Squaring;
         private Button Bubble;
         private Button SelectionSort;
-        private Button button3;
-        private Button button4;
+        private Button GnomeSort;
+        private Button CombSort;
     }
 }
 

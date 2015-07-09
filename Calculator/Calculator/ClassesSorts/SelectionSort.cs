@@ -27,6 +27,7 @@ namespace Calculator.ClassesSorts
                 A[i] = A[min];
                 A[min] = dummy;
             }
+
            string g;
            for (int i = 0; i < A.Length; i++)
            {

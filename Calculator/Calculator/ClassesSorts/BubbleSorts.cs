@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace Calculator.ClassesSorts
 {
@@ -9,10 +8,13 @@ namespace Calculator.ClassesSorts
        {
            string[] split = mass.Split(new char[] {' '});
            int[] A= new int[split.Length];
+
            for (int i = 0; i < A.Length; i++)
            {
                A[i] = Convert.ToInt32(split[i]);
            }
+
+
             for (int i = 0; i < A.Length; i++)
             {
                 for (int j = i + 1; j < A.Length; j++)
@@ -25,6 +27,7 @@ namespace Calculator.ClassesSorts
                     }
                 }
             }
+
            string g;
            for (int i = 0; i < A.Length; i++)
            {

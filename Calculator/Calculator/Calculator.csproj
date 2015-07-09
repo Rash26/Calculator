@@ -44,7 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassesSorts\CombSort.cs" />
     <Compile Include="ClassesSorts\FactorySort.cs" />
+    <Compile Include="ClassesSorts\GnomeSort.cs" />
     <Compile Include="ClassesSorts\InterfaceSort.cs" />
     <Compile Include="ClassesSorts\SelectionSort.cs" />
     <Compile Include="ClassesTwoArguments\Added.cs" />

@@ -8,10 +8,14 @@ namespace Calculator.ClassesSorts
         {
             switch (calculator)
             {
-               case "Bubble":
+                case "Bubble":
                     return new BubbleSorts();
                 case "SelectionSort":
                     return new SelectionSort();
+                case "GnomeSort":
+                    return new GnomeSort();
+                case "CombSort":
+                    return new CombSort();
 
                 default:
                     throw new Exception("Неизвестная операция");
