@@ -213,32 +213,32 @@ namespace Calculator
             // 
             // Bubble
             // 
-            this.Bubble.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Bubble.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Bubble.Location = new System.Drawing.Point(13, 262);
             this.Bubble.Name = "Bubble";
-            this.Bubble.Size = new System.Drawing.Size(61, 47);
+            this.Bubble.Size = new System.Drawing.Size(128, 47);
             this.Bubble.TabIndex = 13;
-            this.Bubble.Text = "1";
+            this.Bubble.Text = "BubbleSorts";
             this.Bubble.UseVisualStyleBackColor = true;
             this.Bubble.Click += new System.EventHandler(this.Sorting_Click);
             // 
             // SelectionSort
             // 
-            this.SelectionSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SelectionSort.Location = new System.Drawing.Point(80, 262);
+            this.SelectionSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SelectionSort.Location = new System.Drawing.Point(147, 262);
             this.SelectionSort.Name = "SelectionSort";
-            this.SelectionSort.Size = new System.Drawing.Size(61, 47);
+            this.SelectionSort.Size = new System.Drawing.Size(130, 47);
             this.SelectionSort.TabIndex = 13;
-            this.SelectionSort.Text = "2";
+            this.SelectionSort.Text = "SelectionSorts";
             this.SelectionSort.UseVisualStyleBackColor = true;
             this.SelectionSort.Click += new System.EventHandler(this.Sorting_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(150, 262);
+            this.button3.Location = new System.Drawing.Point(14, 315);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 47);
+            this.button3.Size = new System.Drawing.Size(127, 47);
             this.button3.TabIndex = 13;
             this.button3.Text = "3";
             this.button3.UseVisualStyleBackColor = true;
@@ -247,9 +247,9 @@ namespace Calculator
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(216, 262);
+            this.button4.Location = new System.Drawing.Point(147, 315);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 47);
+            this.button4.Size = new System.Drawing.Size(130, 47);
             this.button4.TabIndex = 13;
             this.button4.Text = "4";
             this.button4.UseVisualStyleBackColor = true;
