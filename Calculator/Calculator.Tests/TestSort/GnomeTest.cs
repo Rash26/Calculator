@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TestSort
 {
+    /// <summary>
+    /// UNint test for gnome sort
+    /// </summary>
     public class GnomeTest : AbstractSortTest
     {
         [SetUp]

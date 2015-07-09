@@ -4,6 +4,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTest
 {
+    /// <summary>
+    /// UNint test for cotangens
+    /// </summary>
     public class CotTest
     {
         [TestCase(45, 1)]

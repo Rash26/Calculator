@@ -1,10 +1,13 @@
 ﻿namespace Calculator.ClassesSorts
 {
+    /// <summary>
+    /// comb sort
+    /// </summary>
     public class CombSort : ISort
     {
-        public int[] Sort(int[] sourse)
+        public int[] Sort(int[] source)
         {
-            int gap = sourse.Length;
+            int gap = source.Length;
             bool swapped = true;
             while (gap > 1 || swapped)
             {
@@ -13,19 +16,19 @@
 
                 int i = 0;
                 swapped = false;
-                while (i + gap < sourse.Length)
+                while (i + gap < source.Length)
                 {
-                    if (sourse[i].CompareTo(sourse[i + gap]) > 0)
+                    if (source[i].CompareTo(source[i + gap]) > 0)
                     {
-                        int t = sourse[i];
-                        sourse[i] = sourse[i + gap];
-                        sourse[i + gap] = t;
+                        int t = source[i];
+                        source[i] = source[i + gap];
+                        source[i + gap] = t;
                         swapped = true;
                     }
                     i++;
                 }
             }
-            return sourse;
+            return source;
         }
     }
 }

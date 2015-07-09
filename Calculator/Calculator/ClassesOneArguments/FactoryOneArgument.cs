@@ -2,6 +2,9 @@
 
 namespace Calculator.ClassesOneArguments
 {
+    /// <summary>
+    /// factory for one arguments
+    /// </summary>
     public static class FactoryOneArgument
     {
         public static IOneArgument CreatCalculator(string calculator)

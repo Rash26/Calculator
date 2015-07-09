@@ -4,6 +4,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArgumentTest
 {
+    /// <summary>
+    /// UNint test for divide
+    /// </summary>
     public class DivideTest
     {
         [TestCase(4, 2, 2)]

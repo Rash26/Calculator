@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArgumentTest
 {
+    /// <summary>
+    /// UNint test for minus
+    /// </summary>
     public class MinusTest
     {
         [TestCase(2, 4, -2)]

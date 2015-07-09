@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArgumentTest
 {
+    /// <summary>
+    /// UNint test for power
+    /// </summary>
     public class PowerTest
     {
         [TestCase(4, 2, 16)]

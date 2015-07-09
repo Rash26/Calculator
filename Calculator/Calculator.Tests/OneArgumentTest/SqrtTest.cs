@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTest
 {
+    /// <summary>
+    /// UNint test for sqrt
+    /// </summary>
     public class SqrtTest
     {
         [TestCase(25, 5)]

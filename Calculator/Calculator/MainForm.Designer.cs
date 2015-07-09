@@ -218,7 +218,7 @@ namespace Calculator
             this.Bubble.Name = "Bubble";
             this.Bubble.Size = new System.Drawing.Size(128, 47);
             this.Bubble.TabIndex = 13;
-            this.Bubble.Text = "BubbleSorts";
+            this.Bubble.Text = "BubbleSort";
             this.Bubble.UseVisualStyleBackColor = true;
             this.Bubble.Click += new System.EventHandler(this.SortingClick);
             // 
@@ -229,7 +229,7 @@ namespace Calculator
             this.SelectionSort.Name = "SelectionSort";
             this.SelectionSort.Size = new System.Drawing.Size(130, 47);
             this.SelectionSort.TabIndex = 13;
-            this.SelectionSort.Text = "SelectionSorts";
+            this.SelectionSort.Text = "SelectionSort";
             this.SelectionSort.UseVisualStyleBackColor = true;
             this.SelectionSort.Click += new System.EventHandler(this.SortingClick);
             // 

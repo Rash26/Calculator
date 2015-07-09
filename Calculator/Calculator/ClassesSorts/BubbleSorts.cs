@@ -1,5 +1,8 @@
 ﻿namespace Calculator.ClassesSorts
 {
+    /// <summary>
+    /// bubble sort
+    /// </summary>
     public class BubbleSorts : ISort
     {
        public int[] Sort(int[] source)

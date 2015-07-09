@@ -20,6 +20,11 @@ namespace Calculator
             Result.Clear();
         }
 
+        /// <summary>
+        /// numeric entry only
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FirstValueKeyPress(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar))
@@ -36,6 +41,11 @@ namespace Calculator
             }
         }
 
+        /// <summary>
+        /// the event handler for the button with two arguments
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TwoArgument(object sender, EventArgs e)
         {
             var nameButton = ((Button) sender).Name;
@@ -45,6 +55,11 @@ namespace Calculator
             Result.Text = calculate.Calculate(firstArgument, secondArgument).ToString();
         }
 
+        /// <summary>
+        /// the event handler for the button with one arguments
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OneArgument(object sender, EventArgs e)
         {
             var nameButton = ((Button) sender).Name;
@@ -53,6 +68,11 @@ namespace Calculator
             Result.Text = calculate.Calculate(firstArgument).ToString();
         }
 
+        /// <summary>
+        /// the event handler for the button sorts
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SortingClick(object sender, EventArgs e)
         {
             var nameButton = ((Button) sender).Name;
@@ -62,6 +82,11 @@ namespace Calculator
 
         }
 
+        /// <summary>
+        /// function to convert the int to string
+        /// </summary>
+        /// <param name="a"></param>
+        /// <returns></returns>
         private static string IntToStr(int[] a)
         {
             string[] split = new string[a.Length];
@@ -79,6 +104,11 @@ namespace Calculator
             return string.Concat(split);
         }
 
+        /// <summary>
+        /// function to convert the string to int
+        /// </summary>
+        /// <param name="argument"></param>
+        /// <returns></returns>
         private static int[] StrToInt(string argument)
         {
             var split = argument.Split(' ');

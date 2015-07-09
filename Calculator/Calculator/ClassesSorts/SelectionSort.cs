@@ -1,5 +1,8 @@
 ﻿namespace Calculator.ClassesSorts
 {
+    /// <summary>
+    /// selection sort
+    /// </summary>
     public class SelectionSort : ISort
     {
         public int[] Sort(int[] sourse)

@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TestSort
 {
+    /// <summary>
+    /// UNint test for selection sort
+    /// </summary>
     public class SelectionTest : AbstractSortTest
     {
         [SetUp]

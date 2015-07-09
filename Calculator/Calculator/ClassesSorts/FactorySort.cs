@@ -2,6 +2,9 @@
 
 namespace Calculator.ClassesSorts
 {
+    /// <summary>
+    /// factory for sorting
+    /// </summary>
     public static class FactorySort
     {
         public static ISort CreatCalculator(string calculator)

@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTest
 {
+    /// <summary>
+    /// UNint test for cosinus
+    /// </summary>
     public class CosTest
     {
         [TestCase(60, 0.5)]

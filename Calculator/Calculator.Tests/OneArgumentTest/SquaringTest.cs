@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTest
 {
+    /// <summary>
+    /// UNint test for squaring
+    /// </summary>
     public class SquaringTest
     {
         [TestCase(5,25)]

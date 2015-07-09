@@ -4,6 +4,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTest
 {
+    /// <summary>
+    /// UNint test for tangens
+    /// </summary>
     public class TanTest
     {
         [TestCase(0, 0)]

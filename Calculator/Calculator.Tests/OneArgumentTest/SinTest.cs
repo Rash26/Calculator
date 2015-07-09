@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.OneArgumentTest
 {
+    /// <summary>
+    /// UNint test for sinus
+    /// </summary>
     public class SinTest
     {
         [TestCase(0, 0)]

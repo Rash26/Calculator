@@ -1,5 +1,8 @@
 ﻿namespace Calculator.ClassesSorts
 {
+    /// <summary>
+    /// gnome sort
+    /// </summary>
     public class GnomeSort : ISort
     {
         public int[] Sort(int[] sourse)

@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TestSort
 {
+    /// <summary>
+    /// Abstraction class for testing for sorts
+    /// </summary>
     [TestFixture]
     public abstract class AbstractSortTest
     {

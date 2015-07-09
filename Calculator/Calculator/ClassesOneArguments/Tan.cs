@@ -2,6 +2,9 @@
 
 namespace Calculator.ClassesOneArguments
 {
+    /// <summary>
+    /// Calculates tangens
+    /// </summary>
     public class Tan : IOneArgument
     {
         public double Calculate(double argument)
@@ -10,10 +13,8 @@ namespace Calculator.ClassesOneArguments
             {
                 throw new Exception("Нельзя вычислить");
             }
-            else
-            {   
-                return Math.Tan(argument * Math.PI / 180);
-            }
+
+            return Math.Tan(argument*Math.PI/180);
         }
     }
 }

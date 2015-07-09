@@ -3,6 +3,9 @@ using NUnit.Framework;
 
 namespace Calculator.Tests.TwoArgumentTest
 {
+    /// <summary>
+    /// UNint test for cosinus multiply
+    /// </summary>
     public class MultiplyTest
     {
         [TestCase(2, 4, 8)]

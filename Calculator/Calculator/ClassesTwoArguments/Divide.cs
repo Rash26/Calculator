@@ -2,6 +2,9 @@
 
 namespace Calculator.ClassesTwoArguments
 {
+    /// <summary>
+    /// Calculates divide
+    /// </summary>
     public class Divide : ITwoArgument
     {
         public double Calculate(double argumentOne, double argumentTwo)
