@@ -50,10 +50,10 @@ namespace Calculator
             try
             {
                 var nameButton = ((Button) sender).Name;
-                var calculate = FactoryTwoArgument.CreatCalculator(nameButton);
+                var calculator = FactoryTwoArgument.CreatCalculator(nameButton);
                 var firstArgument = Convert.ToDouble(FirstValue.Text.Trim());
                 var secondArgument = Convert.ToDouble(SecondValue.Text.Trim());
-                Result.Text = calculate.Calculate(firstArgument, secondArgument).ToString();
+                Result.Text = calculator.Calculate(firstArgument, secondArgument).ToString();
             }
             catch (Exception exc)
             {

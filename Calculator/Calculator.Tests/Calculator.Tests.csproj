@@ -63,6 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FactoryTest\FactorySortTest.cs" />
+    <Compile Include="FactoryTest\FactoryTwoArgumentTest.cs" />
+    <Compile Include="FactoryTest\FactoryOneArgumentTest.cs" />
     <Compile Include="OneArgumentTest\CosTest.cs" />
     <Compile Include="OneArgumentTest\CotTest.cs" />
     <Compile Include="OneArgumentTest\TanTest.cs" />

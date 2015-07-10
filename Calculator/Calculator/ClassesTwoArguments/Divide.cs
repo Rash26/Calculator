@@ -1,7 +1,4 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace Calculator.ClassesTwoArguments
+﻿namespace Calculator.ClassesTwoArguments
 {
     /// <summary>
     /// Calculates divide
