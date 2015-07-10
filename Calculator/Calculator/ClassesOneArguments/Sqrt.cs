@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Calculator.ClassesOneArguments
 {
@@ -9,7 +10,7 @@ namespace Calculator.ClassesOneArguments
     {
         public double Calculate(double argument)
         {
-            return Math.Sqrt(argument);
+                return Math.Sqrt(argument);
         }
     }
 }

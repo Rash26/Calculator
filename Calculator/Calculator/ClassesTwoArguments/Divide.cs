@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Calculator.ClassesTwoArguments
 {
@@ -9,15 +10,7 @@ namespace Calculator.ClassesTwoArguments
     {
         public double Calculate(double argumentOne, double argumentTwo)
         {
-            if (argumentTwo != 0)
-            {
                 return argumentOne / argumentTwo;
-            }
-            else
-            {
-                throw new Exception("Нельзя делить на ноль");
-            }
-            
         }
     }
 }

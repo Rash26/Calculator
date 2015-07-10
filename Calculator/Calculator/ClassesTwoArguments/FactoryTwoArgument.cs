@@ -21,6 +21,7 @@ namespace Calculator.ClassesTwoArguments
                     return new Added();
                 case "Power":
                     return new Power();
+
                 default:
                     throw new Exception("Неизвестная операция");
             }

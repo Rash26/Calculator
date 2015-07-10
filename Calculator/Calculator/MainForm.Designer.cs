@@ -58,7 +58,7 @@ namespace Calculator
             this.FirstValue.Name = "FirstValue";
             this.FirstValue.Size = new System.Drawing.Size(129, 20);
             this.FirstValue.TabIndex = 0;
-            this.FirstValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstValueKeyPress);
+            this.FirstValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valid);
             // 
             // SecondValue
             // 
@@ -66,7 +66,7 @@ namespace Calculator
             this.SecondValue.Name = "SecondValue";
             this.SecondValue.Size = new System.Drawing.Size(131, 20);
             this.SecondValue.TabIndex = 1;
-            this.SecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FirstValueKeyPress);
+            this.SecondValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Valid);
             // 
             // Result
             // 

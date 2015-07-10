@@ -25,19 +25,18 @@ namespace Calculator
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void FirstValueKeyPress(object sender, KeyPressEventArgs e)
+        private void Valid(object sender, KeyPressEventArgs e)
         {
             if (char.IsNumber(e.KeyChar))
             {
 
             }
-            else if (e.KeyChar == ',' || e.KeyChar == '-' || e.KeyChar == '.' || e.KeyChar == ' ')
+            else if (e.KeyChar == '-' || e.KeyChar == '.' || e.KeyChar == ' ')
             {
-
             }
             else
             {
-                e.Handled = e.KeyChar != (char) Keys.Back;
+            e.Handled = e.KeyChar != (char) Keys.Back;
             }
         }
 
@@ -48,11 +47,18 @@ namespace Calculator
         /// <param name="e"></param>
         private void TwoArgument(object sender, EventArgs e)
         {
-            var nameButton = ((Button) sender).Name;
-            var calculate = FactoryTwoArgument.CreatCalculator(nameButton);
-            var firstArgument = Convert.ToDouble(FirstValue.Text);
-            var secondArgument = Convert.ToDouble(SecondValue.Text);
-            Result.Text = calculate.Calculate(firstArgument, secondArgument).ToString();
+            try
+            {
+                var nameButton = ((Button) sender).Name;
+                var calculate = FactoryTwoArgument.CreatCalculator(nameButton);
+                var firstArgument = Convert.ToDouble(FirstValue.Text.Trim());
+                var secondArgument = Convert.ToDouble(SecondValue.Text.Trim());
+                Result.Text = calculate.Calculate(firstArgument, secondArgument).ToString();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
         /// <summary>
@@ -62,10 +68,17 @@ namespace Calculator
         /// <param name="e"></param>
         private void OneArgument(object sender, EventArgs e)
         {
+            try
+            {
             var nameButton = ((Button) sender).Name;
             var calculate = FactoryOneArgument.CreatCalculator(nameButton);
             var firstArgument = Convert.ToDouble(FirstValue.Text);
             Result.Text = calculate.Calculate(firstArgument).ToString();
+            }
+            catch (Exception exp)
+            {
+                    MessageBox.Show(exp.Message);
+            }
         }
 
         /// <summary>
@@ -75,11 +88,17 @@ namespace Calculator
         /// <param name="e"></param>
         private void SortingClick(object sender, EventArgs e)
         {
-            var nameButton = ((Button) sender).Name;
-            var calculate = FactorySort.CreatCalculator(nameButton);
-            var firstArgument = FirstValue.Text;
-            Result.Text = IntToStr(calculate.Sort(StrToInt(firstArgument)));
-
+            try
+            {
+                var nameButton = ((Button) sender).Name;
+                var calculate = FactorySort.CreatCalculator(nameButton);
+                var firstArgument = FirstValue.Text;
+                Result.Text = IntToStr(calculate.Sort(StrToInt(firstArgument)));
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
         /// <summary>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace Calculator.ClassesOneArguments
 {
@@ -7,9 +8,9 @@ namespace Calculator.ClassesOneArguments
     /// </summary>
     public class Cos : IOneArgument
     {
-     public double Calculate(double argument)
+        public double Calculate(double argument)
         {
-            return Math.Cos(argument * Math.PI / 180);
+                return Math.Cos(argument*Math.PI/180);
         }
     }
 }
